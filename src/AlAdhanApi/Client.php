@@ -4,17 +4,56 @@ namespace AlAdhanApi;
 use AlAdhanApi\Endpoints;
 use AlAdhanApi\Methods;
 
+/**
+ * Class Client
+ * @package AlAdhanApi
+ */
 
 class Client {
-    
+
+    /**
+     * @var \GuzzleHttp\Client
+     */
     protected $client;
+
+    /**
+     * @var
+     */
     protected $latitude;
+
+    /**
+     * @var
+     */
     protected $longitude;
+
+    /**
+     * @var
+     */
     protected $location;
+
+    /**
+     * @var
+     */
     protected $timezone;
+
+    /**
+     * @var
+     */
     protected $method;
+
+    /**
+     * @var
+     */
     protected $timestamp;
+
+    /**
+     * @var
+     */
     protected $month;
+
+    /**
+     * @var
+     */
     protected $year;
     
     public function __construct()

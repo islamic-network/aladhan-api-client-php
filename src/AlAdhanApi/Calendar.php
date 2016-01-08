@@ -5,8 +5,21 @@ use AlAdhanApi\Endpoints;
 use AlAdhanApi\Methods;
 use AlAdhanApi\Client;
 
+/**
+ * Class Calendar
+ * @package AlAdhanApi
+ */
+
 class Calendar extends Client {
-    
+
+    /**
+     * @param $month
+     * @param $year
+     * @param $timezone
+     * @param $latitude
+     * @param $longitude
+     * @param int $method
+     */
     public function __construct($month, $year, $timezone, $latitude, $longitude, $method = Methods::ISoNA)
     {
         parent::__construct();
@@ -20,19 +33,27 @@ class Calendar extends Client {
             
         
     }
-    
+
+    /**
+     * @return mixed
+     * @throws Exception
+     * @throws \Exception
+     */
     public function get()
     {
         try {
-            $r = $this->connect(Endpoints::CALENDAR, $this->loadParams());
+            $r = $this->connect(Endpoints::CALENDAR, $this->getParams());
             
             return $r->json();
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }
     }
-    
-    private function loadParams()
+
+    /**
+     * @return array
+     */
+    private function getParams()
     {
         $data = [];
         $data['month'] = $this->month;

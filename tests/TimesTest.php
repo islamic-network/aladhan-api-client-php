@@ -1,4 +1,5 @@
 <?php 
+
 use AlAdhanApi\Times;
 
 class TimesTest extends PHPUnit_Framework_TestCase

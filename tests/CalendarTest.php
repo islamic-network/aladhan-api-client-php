@@ -1,4 +1,6 @@
-<?php use AlAdhanApi\Calendar;
+<?php
+
+use AlAdhanApi\Calendar;
 
 class CalendarTest extends PHPUnit_Framework_TestCase
 {
