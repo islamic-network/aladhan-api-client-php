@@ -28,7 +28,7 @@ $c = new \AlAdhanApi\Calendar($month, $year, $timezone, $latitude, $longitude);
 There's also a Location class included with this API that uses Google's geocoding API to convert an address into co-ordinates. Google's API has a free limit (but you need to be making thousands of requests a day for this to kick in), and then they'll cut you off unless you get a license. In any case, this should be sufficient for more people. If you will be making millions of requests, there are other ways to do this. Just get in touch if you need help.
 
 ```
-$l = new \AlAdhanApi\Location('Sultanahmet Mosque, Istanbul, Turkey');
+$l = new \AlAdhanApi\Location('Sultanahmet Mosque, Istanbul, Turkey'); // Use a location of your choice here.
 $latitude = $l->latitude;
 $longitude = $l->longitude;
 ```
