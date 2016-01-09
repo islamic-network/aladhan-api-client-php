@@ -12,7 +12,7 @@ composer require aladhan/api-client
 #### Generating Prayer Times for a Given Day
 To get prayer times for a given day, use:
 ```
-$c = new \AlAdhanApi/Times($unix_timestamp , $timezone, $latitude, $longitude, $method);
+$c = new \AlAdhanApi\Times($unix_timestamp , $timezone, $latitude, $longitude, $method);
 ```
 The $unix_timestamp is a timestamp from the day you want prayer times for. Valid $timezones are listed @ http://php.net/manual/en/timezones.php. See the Getting Co-ordinates below for getting $latitude and $longitude. The $method options can be seen in the Methods class.
 
