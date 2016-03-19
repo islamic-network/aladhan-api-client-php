@@ -56,6 +56,21 @@ class Client {
      */
     protected $year;
     
+    /**
+     * @var
+     */
+    protected $city;
+    
+    /**
+     * @var
+     */
+    protected $country;
+    
+    /**
+     * @var
+     */
+    protected $state;
+    
     public function __construct()
     {
         $this->client = new \GuzzleHttp\Client();
@@ -94,6 +109,18 @@ class Client {
     
     public function setYear($year) {
         $this->year = $year;
+    }
+    
+    public function setCity($city) {
+        $this->city = $city;
+    }
+    
+    public function setCountry($country) {
+        $this->country = $country;
+    }
+    
+    public function setState($state) {
+        $this->state = $state;
     }
     
     protected function connect($endpoint, array $data)
