@@ -25,7 +25,7 @@ class TimesByAddress extends Client {
     {
         parent::__construct();
         
-        $this->setAddress($city);
+        $this->setAddress($address);
         if ($timestamp === null) {
             $this->setTimestamp(time());
         }
