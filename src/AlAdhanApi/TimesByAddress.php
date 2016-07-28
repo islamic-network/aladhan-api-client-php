@@ -21,7 +21,7 @@ class TimesByAddress extends Client {
      * @param $timestamp Integer Defaults to time()
      * @param int $method
      */
-    public function __construct($address, $timestamp = null, $method = Methods::MAKKAH, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::SHAFI, $school = Schools::SHAFI)
+    public function __construct($address, $timestamp = null, $method = Methods::MAKKAH, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI)
     {
         parent::__construct();
         
