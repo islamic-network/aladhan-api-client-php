@@ -69,7 +69,22 @@ class Client {
     /**
      * @var
      */
+    protected $address;
+    
+    /**
+     * @var
+     */
     protected $state;
+    
+    /**
+     * @var
+     */
+    protected $latitudeAdjustmentMethod;
+    
+    /**
+     * @var
+     */
+    protected $school;
     
     public function __construct()
     {
@@ -121,6 +136,18 @@ class Client {
     
     public function setState($state) {
         $this->state = $state;
+    }
+    
+    public function setAddress($address) {
+        $this->address = $address;
+    }
+    
+    public function setLatitudeAdjustmentMethod($method) {
+        $this->latitudeAdjustmentMethod = (int) $method;
+    }
+    
+    public function setSchool($school) {
+        $this->school = (int) $school;
     }
     
     protected function connect($endpoint, array $data)
