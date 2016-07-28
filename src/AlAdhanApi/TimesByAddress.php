@@ -57,7 +57,7 @@ class TimesByAddress extends Client {
     private function getParams()
     {
         $data = [];
-        $data['address'] = $this->city;
+        $data['address'] = $this->address;
         $data['method'] = $this->method;
         $data['school'] = $this->school;
         $data['latitudeAdjustmentMethod'] = $this->latitudeAdjustmentMethod;
