@@ -49,7 +49,7 @@ class Location
     {
         try {
             $r = $this->connect(Endpoints::GOOGLE_GEOCODING, $this->getParams());
-            $r2 = $r->json();
+            $r2 = $r;
             if ($r2['status'] !== 'ZERO_RESULTS') {
                 $this->latitude = $r2['results'][0]['geometry']['location']['lat'];
                 $this->longitude = $r2['results'][0]['geometry']['location']['lng'];
@@ -80,7 +80,7 @@ class Location
     private function connect($endpoint, array $data)
     {
         try {
-            return $this->client->get(
+            $request = $this->client->get(
                 $endpoint,
                 [
                     'headers' => ['Content-Type' => 'application/text'],
@@ -88,6 +88,8 @@ class Location
                     'verify' => false
                 ]
             );
+
+            return (string) $request->getBody();
         } catch(\Exception $e) {
             // Write to PHP log.
             throw new \Exception($e->getMessage(), $e->getCode());

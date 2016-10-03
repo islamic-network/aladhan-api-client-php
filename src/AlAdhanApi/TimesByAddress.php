@@ -24,7 +24,7 @@ class TimesByAddress extends Client {
     public function __construct($address, $timestamp = null, $method = Methods::MAKKAH, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI)
     {
         parent::__construct();
-        
+
         $this->setAddress($address);
         if ($timestamp === null) {
             $this->setTimestamp(time());
@@ -44,8 +44,8 @@ class TimesByAddress extends Client {
     {
         try {
             $r = $this->connect(Endpoints::TIMINGS_ADDRESS. '/' . $this->timestamp, $this->getParams());
-            
-            return $r->json();
+
+            return $r;
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }

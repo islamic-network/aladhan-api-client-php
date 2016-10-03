@@ -45,8 +45,8 @@ class TimesByCity extends Client {
     {
         try {
             $r = $this->connect(Endpoints::TIMINGS_CITY . '/' . $this->timestamp, $this->getParams());
-            
-            return $r->json();
+
+            return $r;
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }

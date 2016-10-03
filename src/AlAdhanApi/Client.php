@@ -153,21 +153,27 @@ class Client {
     protected function connect($endpoint, array $data)
     {
         try {
-            return $this->client->get(
+            $resp = $this->client->request(
+                'GET',
                 $endpoint,
                 [
-                    'headers' => ['Content-Type' => 'application/text'],
-                    'body' => json_encode($data, JSON_UNESCAPED_SLASHES),
+                'headers' => [
+                    'Content-Type' => 'application/text',
+//                    'Accept'     => 'application/json',
+                    'User-Agent' => 'AlAdhanPhpApiClient/1.1',
+                ],
+                    'query' => $data,
                     'verify' => false
                 ]
             );
+
+            $json = (string) $resp->getBody();
+            if (json_decode($json) !== false) {
+                return json_decode($json, true);
+            }
         } catch(\Exception $e) {
             // Write to PHP log.
             throw new \Exception($e->getMessage(), $e->getCode());
         }
     }
-                              
-                              
-    
-    
 }

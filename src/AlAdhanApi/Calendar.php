@@ -43,8 +43,8 @@ class Calendar extends Client {
     {
         try {
             $r = $this->connect(Endpoints::CALENDAR, $this->getParams());
-            
-            return $r->json();
+
+            return $r;
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }
