@@ -28,6 +28,8 @@ class TimesByAddress extends Client {
         $this->setAddress($address);
         if ($timestamp === null) {
             $this->setTimestamp(time());
+        } else {
+            $this->setTimestamp($timestamp);
         }
         $this->setMethod($method);
         $this->setLatitudeAdjustmentMethod($latitudeAdjustmentMethod);
@@ -61,8 +63,8 @@ class TimesByAddress extends Client {
         $data['method'] = $this->method;
         $data['school'] = $this->school;
         $data['latitudeAdjustmentMethod'] = $this->latitudeAdjustmentMethod;
-        
+
         return $data;
     }
-    
+
 }

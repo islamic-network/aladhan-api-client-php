@@ -30,6 +30,8 @@ class TimesByCity extends Client {
         }
         if ($timestamp === null) {
             $this->setTimestamp(time());
+        } else {
+            $this->setTimestamp($timestamp);
         }
         $this->setMethod($method);
             
