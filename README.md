@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/meezaan/aladhan-api-client-php.svg?style=shield)](https://circleci.com/gh/meezaan/aladhan-api-client-php)
+
 ### AlAdhan Prayer Times API Client (PHP)
 This is a PHP API client that uses the rest API at aladhan.com to generate prayer times for Islamic prayers.
 
