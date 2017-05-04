@@ -4,7 +4,6 @@ dependencies:
 
   override:
     - composer install --prefer-dist --no-interaction
-    - wget http://www.phpdoc.org/phpDocumentor.phar
 
 test:
   override:
