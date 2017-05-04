@@ -49,10 +49,10 @@ class Location
     {
         try {
             $r = $this->connect(Endpoints::GOOGLE_GEOCODING, $this->getParams());
-            $r2 = $r;
-            if ($r2['status'] !== 'ZERO_RESULTS') {
-                $this->latitude = $r2['results'][0]['geometry']['location']['lat'];
-                $this->longitude = $r2['results'][0]['geometry']['location']['lng'];
+            $r2 = json_decode($r);
+            if ($r2->status !== 'ZERO_RESULTS') {
+                $this->latitude = $r2->results[0]->geometry->location->lat;
+                $this->longitude = $r2->results[0]->geometry->location->lng;
             }
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
