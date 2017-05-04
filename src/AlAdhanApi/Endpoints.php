@@ -32,32 +32,32 @@ class Endpoints {
      *
      */
     const GOOGLE_GEOCODING = 'http://maps.googleapis.com/maps/api/geocode/json';
-    
+
     /**
      *
      */
     const INFO_CITY = 'http://api.aladhan.com/cityInfo';
-    
+
     /**
      *
      */
     const INFO_ADDRESS = 'http://api.aladhan.com/addressInfo';
-    
+
     /**
      *
      */
     const TIMINGS_CITY = 'http://api.aladhan.com/timingsByCity';
-    
+
     /**
      *
      */
     const CALENDAR_CITY = 'http://api.aladhan.com/calendarByCity';
-    
+
     /**
      *
      */
     const TIMINGS_ADDRESS = 'http://api.aladhan.com/timingsByAddress';
-    
+
     /**
      *
      */
