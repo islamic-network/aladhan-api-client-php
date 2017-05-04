@@ -1,0 +1,11 @@
+dependencies:
+  pre:
+    - sudo composer self-update
+
+  override:
+    - composer install --prefer-dist --no-interaction
+    - wget http://www.phpdoc.org/phpDocumentor.phar
+
+test:
+  override:
+    - vendor/bin/phpunit tests/
