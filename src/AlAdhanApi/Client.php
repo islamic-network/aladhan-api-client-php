@@ -161,6 +161,7 @@ class Client {
                     'Content-Type' => 'application/text',
 //                    'Accept'     => 'application/json',
                     'User-Agent' => 'AlAdhanPhpApiClient/1.1',
+                    'Referer' => gethostname(),
                 ],
                     'query' => $data,
                     'verify' => false
