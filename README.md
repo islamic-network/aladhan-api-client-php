@@ -28,7 +28,7 @@ $times = $t->get();
 ```
 The $unix_timestamp is a timestamp from the day you want prayer times for. Valid $timezones are listed @ http://php.net/manual/en/timezones.php. See the Getting Co-ordinates below for getting $latitude and $longitude. The $method options can be seen in the Methods class.
 
-This will return hthe JSON output as shown on @ http://aladhan.com/rest-api#endpointTimings.
+This will return the JSON output as shown on @ http://aladhan.com/rest-api#endpointTimings.
 
 #### Generating prayer times for a given month:
 To get a list of prayer times for an entire month in a given year, use:
