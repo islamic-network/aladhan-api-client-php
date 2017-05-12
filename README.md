@@ -3,7 +3,9 @@
 ### AlAdhan Prayer Times API Client (PHP)
 This is a PHP API client that uses the rest API at aladhan.com to generate prayer times for Islamic prayers.
 
-For more information, please visit http://aladhan.com/rest-api.
+For more information, please visit http://aladhan.com/prayer-times-api.
+
+This client is used to build various parts of AlAdhan.com, including apps https://aladhan.com/ramadan-prayer-times/2017/London/UK and https://aladhan.com/ramadan-calendar.
 
 ### Installation
 The API Client is a composer package. To use it, you need to run the following:
@@ -57,4 +59,4 @@ You can now use the above values with the Times or Calendar class to get your pr
 Meezaan-ud-Din Abdu Dhil-Jalali Wal-Ikram (@meezaan).
 
 ### Support or Contact
-For support, please visit http://aladhan.com/rest-api or http://aladhan.com/contact.
+For support, please visit http://aladhan.com/prayer-times-api or http://aladhan.com/contact.
