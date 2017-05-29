@@ -4,6 +4,8 @@ namespace AlAdhanApi;
 use AlAdhanApi\Endpoints;
 use AlAdhanApi\Methods;
 use AlAdhanApi\Client;
+use AlAdhanApi\LatitudeAdjustmentMethods;
+use AlAdhanApi\Schools;
 
 /**
  * Class Times
@@ -19,17 +21,18 @@ class Times extends Client {
      * @param $longitude
      * @param int $method
      */
-    public function __construct($timestamp, $timezone, $latitude, $longitude, $method = Methods::ISoNA)
+    public function __construct($timestamp, $timezone, $latitude, $longitude, $method = Methods::ISoNA, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI )
     {
         parent::__construct();
-        
+
         $this->setTimestamp($timestamp);
         $this->setTimezone($timezone);
         $this->setLatitude($latitude);
         $this->setLongitude($longitude);
         $this->setMethod($method);
-            
-        
+        $this->setLatitudeAdjustmentMethod($latitudeAdjustmentMethod);
+        $this->setSchool($school);
+
     }
 
     /**
