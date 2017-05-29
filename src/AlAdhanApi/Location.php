@@ -29,6 +29,11 @@ class Location
     public $longitude;
 
     /**
+     * @var
+     */
+    public $timezone;
+
+    /**
      * @param $location
      * @throws Exception
      */
@@ -53,6 +58,7 @@ class Location
             if ($r2->status === 'OK') {
                 $this->latitude = $r2->data->latitude;
                 $this->longitude = $r2->data->longitude;
+                $this->timezone = $r2->data->timezone;
             }
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
