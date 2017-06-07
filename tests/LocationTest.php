@@ -2,7 +2,7 @@
 
 use AlAdhanApi\Location;
 
-class LocationTest extends PHPUnit_Framework_TestCase
+class LocationTest extends PHPUnit\Framework\TestCase
 {
     public function testLocation()
     {

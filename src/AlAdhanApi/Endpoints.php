@@ -62,4 +62,20 @@ class Endpoints {
      *
      */
     const CALENDAR_ADDRESS = 'http://api.aladhan.com/calendarByAddress';
+
+    const HIJRI_TO_GREGORIAN_DATE = 'http://api.aladhan.com/hToG';
+
+    const GREGORIAN_TO_HIJRI_DATE = 'http://api.aladhan.com/gToH';
+
+    const GREGORIAN_TO_HIJRI_CALENDAR = 'http://api.aladhan.com/gToHCalendar';
+
+    const HIJRI_TO_GREGORIAN_CALENDAR = 'http://api.aladhan.com/hToGCalendar';
+
+    const NEXT_HIJRI_HOLIDAY = ' http://api.aladhan.com/nextHijriHoliday';
+
+    const CURRENT_ISLAMIC_MONTH = 'http://api.aladhan.com/currentIslamicMonth';
+
+    const CURRENT_ISLAMIC_YEAR = 'http://api.aladhan.com/currentIslamicYear';
+
+    const RAMADAN_ISLAMIC_YEAR_FROM_GREGORIAN = 'http://api.aladhan.com/islamicYearFromGregorianForRamadan';
 }

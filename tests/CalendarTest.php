@@ -3,7 +3,7 @@
 use AlAdhanApi\Calendar;
 use AlAdhanApi\CalendarByCity;
 
-class CalendarTest extends PHPUnit_Framework_TestCase
+class CalendarTest extends PHPUnit\Framework\TestCase
 {
     public function testCalendar()
     {
@@ -11,7 +11,7 @@ class CalendarTest extends PHPUnit_Framework_TestCase
         $r = $c->get();
         $this->assertEquals('30 Dec 2020', $r['data'][29]['date']['readable']);
     }
-    
+
     public function testCalendarByCity()
     {
         $c = new CalendarByCity('Dubai', 'AE', 12, 2020);

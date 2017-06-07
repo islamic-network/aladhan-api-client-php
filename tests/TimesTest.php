@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 use AlAdhanApi\Times;
 use AlAdhanApi\TimesByCity;
 use AlAdhanApi\TimesByAddress;
 
-class TimesTest extends PHPUnit_Framework_TestCase
+class TimesTest extends PHPUnit\Framework\TestCase
 {
     public function testTimes()
     {
@@ -13,7 +13,7 @@ class TimesTest extends PHPUnit_Framework_TestCase
         $r = $c->get();
         $this->assertEquals($t, $r['data']['date']['timestamp']);
     }
-    
+
     public function testTimesByCity()
     {
         $t = time();
