@@ -71,7 +71,7 @@ class Endpoints {
 
     const HIJRI_TO_GREGORIAN_CALENDAR = 'http://api.aladhan.com/hToGCalendar';
 
-    const NEXT_HIJRI_HOLIDAY = ' http://api.aladhan.com/nextHijriHoliday';
+    const NEXT_HIJRI_HOLIDAY = 'http://api.aladhan.com/nextHijriHoliday';
 
     const CURRENT_ISLAMIC_MONTH = 'http://api.aladhan.com/currentIslamicMonth';
 
