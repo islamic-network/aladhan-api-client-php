@@ -55,7 +55,7 @@ class HijriGregorianCalendar extends Client {
     public function gregorianToHijriCalendar($m, $Y)
     {
         try {
-            $r = $this->connect(Endpoints::GREGORIAN_TO_HIJRI_CALENDAR. '/'. $m . '/', $y, []);
+            $r = $this->connect(Endpoints::GREGORIAN_TO_HIJRI_CALENDAR. '/'. $m . '/' . $y, []);
 
             return $r;
         } catch (Exception $e) {
@@ -66,7 +66,7 @@ class HijriGregorianCalendar extends Client {
     public function hijriToGregorianCalendar($m, $y)
     {
         try {
-            $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_CALENDAR. '/'. $m . '/', $y, []);
+            $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_CALENDAR. '/'. $m . '/' . $y, []);
 
             return $r;
         } catch (Exception $e) {
