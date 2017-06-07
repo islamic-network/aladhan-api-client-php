@@ -63,7 +63,7 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
-    public function hijriToGregorianCalendar($m, $Y)
+    public function hijriToGregorianCalendar($m, $y)
     {
         try {
             $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_CALENDAR. '/'. $m . '/', $y, []);
