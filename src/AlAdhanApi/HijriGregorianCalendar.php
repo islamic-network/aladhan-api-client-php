@@ -118,5 +118,19 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
+    public function hijriHolidays()
+    {
+    
+    }
+
+    public function specialDays()
+    {
+    
+    }
+
+    public function islamicMonths()
+    {
+    
+    }
 
 }
