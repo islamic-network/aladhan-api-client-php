@@ -118,18 +118,39 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
-    public function hijriHolidays()
+    public function hijriHolidays($day, $month)
     {
+        try {
+            $r = $this->connect(Endpoints::HIJRI_HOLIDAYS . '/'. $day . '/' . $month, []);
+
+            return $r;
+        } catch (Exception $e) {
+            throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
+        }
     
     }
 
     public function specialDays()
     {
+        try {
+            $r = $this->connect(Endpoints::SPECIAL_DAYS, []);
+
+            return $r;
+        } catch (Exception $e) {
+            throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
+        }
     
     }
 
     public function islamicMonths()
     {
+        try {
+            $r = $this->connect(Endpoints::ISLAMIC_MONTHS, []);
+
+            return $r;
+        } catch (Exception $e) {
+            throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
+        }
     
     }
 
