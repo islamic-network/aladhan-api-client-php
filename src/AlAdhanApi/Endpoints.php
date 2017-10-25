@@ -78,4 +78,7 @@ class Endpoints {
     const CURRENT_ISLAMIC_YEAR = 'http://api.aladhan.com/currentIslamicYear';
 
     const RAMADAN_ISLAMIC_YEAR_FROM_GREGORIAN = 'http://api.aladhan.com/islamicYearFromGregorianForRamadan';
+    const HIJRI_HOLIDAYS  = 'http://api.aladhan.com/hijriHolidays';
+    const SPECIAL_DAYS  = 'http://api.aladhan.com/specialDays';
+    const ISLAMIC_MONTHS  = 'http://api.aladhan.com/islamicMonths';
 }
