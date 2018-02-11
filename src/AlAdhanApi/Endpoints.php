@@ -8,77 +8,50 @@ namespace AlAdhanApi;
 
 class Endpoints {
 
-    /**
-     *
-     */
-    const TIMINGS = 'http://api.aladhan.com/timings';
+    const TIMINGS = 'http://api.aladhan.com/v1/timings';
 
-    /**
-     *
-     */
-    const CALENDAR = 'http://api.aladhan.com/calendar';
+    const CALENDAR = 'http://api.aladhan.com/v1/calendar';
 
-    /**
-     *
-     */
-    const CURRENT_TIME = 'http://api.aladhan.com/currentTime';
+    const HIJRI_CALENDAR = 'http://api.aladhan.com/v1/hijriCalendar';
 
-    /**
-     *
-     */
-    const CURRENT_TIMESTAMP = 'http://api.aladhan.com/currentTimestamp';
+    const CURRENT_TIME = 'http://api.aladhan.com/v1/currentTime';
 
-    /**
-     *
-     */
+    const CURRENT_TIMESTAMP = 'http://api.aladhan.com/v1/currentTimestamp';
+
     const GOOGLE_GEOCODING = 'http://maps.googleapis.com/maps/api/geocode/json';
 
-    /**
-     *
-     */
-    const INFO_CITY = 'http://api.aladhan.com/cityInfo';
+    const INFO_CITY = 'http://api.aladhan.com/v1/cityInfo';
 
-    /**
-     *
-     */
-    const INFO_ADDRESS = 'http://api.aladhan.com/addressInfo';
+    const INFO_ADDRESS = 'http://api.aladhan.com/v1/addressInfo';
 
-    /**
-     *
-     */
-    const TIMINGS_CITY = 'http://api.aladhan.com/timingsByCity';
+    const TIMINGS_CITY = 'http://api.aladhan.com/v1/timingsByCity';
 
-    /**
-     *
-     */
-    const CALENDAR_CITY = 'http://api.aladhan.com/calendarByCity';
+    const CALENDAR_CITY = 'http://api.aladhan.com/v1/calendarByCity';
 
-    /**
-     *
-     */
-    const TIMINGS_ADDRESS = 'http://api.aladhan.com/timingsByAddress';
+    const HIJRI_CALENDAR_CITY = 'http://api.aladhan.com/v1/hijriCalendarByCity';
 
-    /**
-     *
-     */
-    const CALENDAR_ADDRESS = 'http://api.aladhan.com/calendarByAddress';
+    const TIMINGS_ADDRESS = 'http://api.aladhan.com/v1/timingsByAddress';
 
-    const HIJRI_TO_GREGORIAN_DATE = 'http://api.aladhan.com/hToG';
+    const CALENDAR_ADDRESS = 'http://api.aladhan.com/v1/calendarByAddress';
 
-    const GREGORIAN_TO_HIJRI_DATE = 'http://api.aladhan.com/gToH';
+    const HIJRI_CALENDAR_ADDRESS = 'http://api.aladhan.com/v1/hijriCalendarByAddress';
 
-    const GREGORIAN_TO_HIJRI_CALENDAR = 'http://api.aladhan.com/gToHCalendar';
+    const HIJRI_TO_GREGORIAN_DATE = 'http://api.aladhan.com/v1/hToG';
 
-    const HIJRI_TO_GREGORIAN_CALENDAR = 'http://api.aladhan.com/hToGCalendar';
+    const GREGORIAN_TO_HIJRI_DATE = 'http://api.aladhan.com/v1/gToH';
 
-    const NEXT_HIJRI_HOLIDAY = 'http://api.aladhan.com/nextHijriHoliday';
+    const GREGORIAN_TO_HIJRI_CALENDAR = 'http://api.aladhan.com/v1/gToHCalendar';
 
-    const CURRENT_ISLAMIC_MONTH = 'http://api.aladhan.com/currentIslamicMonth';
+    const HIJRI_TO_GREGORIAN_CALENDAR = 'http://api.aladhan.com/v1/hToGCalendar';
 
-    const CURRENT_ISLAMIC_YEAR = 'http://api.aladhan.com/currentIslamicYear';
+    const NEXT_HIJRI_HOLIDAY = 'http://api.aladhan.com/v1/nextHijriHoliday';
 
-    const RAMADAN_ISLAMIC_YEAR_FROM_GREGORIAN = 'http://api.aladhan.com/islamicYearFromGregorianForRamadan';
-    const HIJRI_HOLIDAYS  = 'http://api.aladhan.com/hijriHolidays';
-    const SPECIAL_DAYS  = 'http://api.aladhan.com/specialDays';
-    const ISLAMIC_MONTHS  = 'http://api.aladhan.com/islamicMonths';
+    const CURRENT_ISLAMIC_MONTH = 'http://api.aladhan.com/v1/currentIslamicMonth';
+
+    const CURRENT_ISLAMIC_YEAR = 'http://api.aladhan.com/v1/currentIslamicYear';
+
+    const RAMADAN_ISLAMIC_YEAR_FROM_GREGORIAN = 'http://api.aladhan.com/v1/islamicYearFromGregorianForRamadan';
+    const HIJRI_HOLIDAYS  = 'http://api.aladhan.com/v1/hijriHolidays';
+    const SPECIAL_DAYS  = 'http://api.aladhan.com/v1/specialDays';
+    const ISLAMIC_MONTHS  = 'http://api.aladhan.com/v1/islamicMonths';
 }

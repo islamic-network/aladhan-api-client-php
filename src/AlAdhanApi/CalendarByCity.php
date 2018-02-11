@@ -12,17 +12,20 @@ use AlAdhanApi\Client;
 
 class CalendarByCity extends Client {
 
+    private $hijri;
+
     /**
      * @param $city
      * @param $country
      * @param $state
      * @param $timestamp Integer Defaults to time()
      * @param int $method
+     * @param bool $hijri - are you specifying a hijri month and/or year?
      */
-    public function __construct($city, $country, $month, $year, $state = null, $method = Methods::ISoNA)
+    public function __construct($city, $country, $month, $year, $state = null, $method = Methods::ISoNA, $hijri = false)
     {
         parent::__construct();
-        
+
         $this->setCity($city);
         $this->setCountry($country);
         if ($state !== null) {
@@ -31,8 +34,9 @@ class CalendarByCity extends Client {
         $this->setMonth($month);
         $this->setYear($year);
         $this->setMethod($method);
-            
-        
+        $this->hijri = $hijri;
+
+
     }
 
     /**
@@ -43,7 +47,11 @@ class CalendarByCity extends Client {
     public function get()
     {
         try {
-            $r = $this->connect(Endpoints::CALENDAR_CITY, $this->getParams());
+            if ($this->hijri) {
+                $r = $this->connect(Endpoints::HIJRI_CALENDAR_CITY, $this->getParams());
+            } else {
+                $r = $this->connect(Endpoints::CALENDAR_CITY, $this->getParams());
+            }
 
             return $r;
         } catch (Exception $e) {
@@ -65,8 +73,8 @@ class CalendarByCity extends Client {
         }
         $data['month'] = $this->month;
         $data['year'] = $this->year;
-        
+
         return $data;
     }
-    
+
 }
