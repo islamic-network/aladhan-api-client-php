@@ -74,10 +74,10 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
-    public function nextHijriHoliday()
+    public function nextHijriHoliday($adjustment = 0)
     {
         try {
-            $r = $this->connect(Endpoints::NEXT_HIJRI_HOLIDAY, []);
+            $r = $this->connect(Endpoints::NEXT_HIJRI_HOLIDAY, ['adjustment' => $adjustment]);
 
             return $r;
         } catch (Exception $e) {
@@ -96,10 +96,10 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
-    public function currentIslamicMonth()
+    public function currentIslamicMonth($adjustment = 0)
     {
         try {
-            $r = $this->connect(Endpoints::CURRENT_ISLAMIC_MONTH, []);
+            $r = $this->connect(Endpoints::CURRENT_ISLAMIC_MONTH, ['adjustment' => $adjustment]);
 
             return $r;
         } catch (Exception $e) {
