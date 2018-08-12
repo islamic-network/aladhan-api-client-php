@@ -159,7 +159,7 @@ class Client {
                 [
                 'headers' => [
                     'Content-Type' => 'application/text',
-                    'User-Agent' => 'AlAdhanPhpApiClient/1.10',
+                    'User-Agent' => 'AlAdhanPhpApiClient/1.11',
                     'Referer' => gethostname(),
                 ],
                     'query' => $data,
