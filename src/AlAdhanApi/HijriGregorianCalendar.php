@@ -24,10 +24,10 @@ class HijriGregorianCalendar extends Client {
      * @throws Exception
      * @throws \Exception
      */
-    public function hijriToGregorian($date)
+    public function hijriToGregorian($date, $adjustment = 0)
     {
         try {
-            $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_DATE, ['date' => $date]);
+            $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_DATE, ['date' => $date, 'adjustment' => $adjustment]);
 
             return $r;
         } catch (Exception $e) {
@@ -41,10 +41,10 @@ class HijriGregorianCalendar extends Client {
      * @throws Exception
      * @throws \Exception
      */
-    public function gregorianToHijri($date)
+    public function gregorianToHijri($date, $adjustment = 0)
     {
         try {
-            $r = $this->connect(Endpoints::GREGORIAN_TO_HIJRI_DATE, ['date' => $date]);
+            $r = $this->connect(Endpoints::GREGORIAN_TO_HIJRI_DATE, ['date' => $date, 'adjustment' => $adjustment]);
 
             return $r;
         } catch (Exception $e) {
@@ -52,10 +52,10 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
-    public function gregorianToHijriCalendar($m, $y)
+    public function gregorianToHijriCalendar($m, $y, $adjustment = 0)
     {
         try {
-            $r = $this->connect(Endpoints::GREGORIAN_TO_HIJRI_CALENDAR. '/'. $m . '/' . $y, []);
+            $r = $this->connect(Endpoints::GREGORIAN_TO_HIJRI_CALENDAR. '/'. $m . '/' . $y, ['adjustment' => $adjustment]);
 
             return $r;
         } catch (Exception $e) {
@@ -63,10 +63,10 @@ class HijriGregorianCalendar extends Client {
         }
     }
 
-    public function hijriToGregorianCalendar($m, $y)
+    public function hijriToGregorianCalendar($m, $y, $adjustment = 0)
     {
         try {
-            $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_CALENDAR. '/'. $m . '/' . $y, []);
+            $r = $this->connect(Endpoints::HIJRI_TO_GREGORIAN_CALENDAR. '/'. $m . '/' . $y, ['adjustment' => $adjustment]);
 
             return $r;
         } catch (Exception $e) {
