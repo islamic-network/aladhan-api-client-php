@@ -21,7 +21,7 @@ class TimesByAddress extends Client {
      * @param $timestamp Integer Defaults to time()
      * @param int $method
      */
-    public function __construct($address, $timestamp = null, $method = Methods::MAKKAH, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI)
+    public function __construct($address, $timestamp = null, $method = Methods::MAKKAH, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI, $adjustment = 0)
     {
         parent::__construct();
 
@@ -34,6 +34,7 @@ class TimesByAddress extends Client {
         $this->setMethod($method);
         $this->setLatitudeAdjustmentMethod($latitudeAdjustmentMethod);
         $this->setSchool($school);
+        $this->setAdjustment($adjustment);
 
     }
 
@@ -63,6 +64,7 @@ class TimesByAddress extends Client {
         $data['method'] = $this->method;
         $data['school'] = $this->school;
         $data['latitudeAdjustmentMethod'] = $this->latitudeAdjustmentMethod;
+        $data['adjustment'] = $this->adjustment;
 
         return $data;
     }

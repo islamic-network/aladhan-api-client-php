@@ -19,7 +19,7 @@ class TimesByCity extends Client {
      * @param $timestamp Integer Defaults to time()
      * @param int $method
      */
-    public function __construct($city, $country, $timestamp = null, $state = null, $method = Methods::ISoNA)
+    public function __construct($city, $country, $timestamp = null, $state = null, $method = Methods::ISoNA, $adjustment = 0)
     {
         parent::__construct();
         
@@ -34,6 +34,7 @@ class TimesByCity extends Client {
             $this->setTimestamp($timestamp);
         }
         $this->setMethod($method);
+        $this->setAdjustment($adjustment);
             
         
     }
@@ -66,6 +67,7 @@ class TimesByCity extends Client {
         if ($this->state !== null || $this->state !== '') {
             $data['state'] = $this->state;
         }
+        $data['adjustment'] = $this->adjustment;
         
         return $data;
     }

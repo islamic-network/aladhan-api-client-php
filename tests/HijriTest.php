@@ -32,6 +32,6 @@ class HijriTest extends PHPUnit\Framework\TestCase
     {
         $c = new HijriGregorianCalendar();
         $r = $c->specialDays();
-        $this->assertEquals('18', count($r['data']));
+        $this->assertEquals('19', count($r['data']));
     }
 }

@@ -21,7 +21,7 @@ class Times extends Client {
      * @param $longitude
      * @param int $method
      */
-    public function __construct($timestamp, $timezone, $latitude, $longitude, $method = Methods::ISoNA, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI )
+    public function __construct($timestamp, $timezone, $latitude, $longitude, $method = Methods::ISoNA, $latitudeAdjustmentMethod = LatitudeAdjustmentMethods::ANGLE_BASED, $school = Schools::SHAFI, $adjustment = 0 )
     {
         parent::__construct();
 
@@ -32,6 +32,7 @@ class Times extends Client {
         $this->setMethod($method);
         $this->setLatitudeAdjustmentMethod($latitudeAdjustmentMethod);
         $this->setSchool($school);
+        $this->setAdjustment($adjustment);
 
     }
 
@@ -61,6 +62,7 @@ class Times extends Client {
         $data['latitude'] = $this->latitude;
         $data['timezonestring'] = $this->timezone;
         $data['method'] = $this->method;
+        $data['adjustment'] = $this->adjustment;
         
         return $data;
     }

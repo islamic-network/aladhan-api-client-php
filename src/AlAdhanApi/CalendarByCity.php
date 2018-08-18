@@ -22,7 +22,7 @@ class CalendarByCity extends Client {
      * @param int $method
      * @param bool $hijri - are you specifying a hijri month and/or year?
      */
-    public function __construct($city, $country, $month, $year, $state = null, $method = Methods::ISoNA, $hijri = false)
+    public function __construct($city, $country, $month, $year, $state = null, $method = Methods::ISoNA, $hijri = false, $adjustment = 0)
     {
         parent::__construct();
 
@@ -35,6 +35,7 @@ class CalendarByCity extends Client {
         $this->setYear($year);
         $this->setMethod($method);
         $this->hijri = $hijri;
+        $this->setAdjustment($adjustment);
 
 
     }
@@ -73,6 +74,7 @@ class CalendarByCity extends Client {
         }
         $data['month'] = $this->month;
         $data['year'] = $this->year;
+        $data['adjustment'] = $this->adjustment;
 
         return $data;
     }

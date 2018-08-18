@@ -84,6 +84,11 @@ class Client {
     /**
      * @var
      */
+    protected $adjustment;
+
+    /**
+     * @var
+     */
     protected $school;
 
     public function __construct()
@@ -150,6 +155,10 @@ class Client {
         $this->school = (int) $school;
     }
 
+    public function setAdjustment($adjustment) {
+        $this->adjustment = (int) $adjustment;
+    }
+
     protected function connect($endpoint, array $data)
     {
         try {
@@ -159,7 +168,7 @@ class Client {
                 [
                 'headers' => [
                     'Content-Type' => 'application/text',
-                    'User-Agent' => 'AlAdhanPhpApiClient/1.11',
+                    'User-Agent' => 'AlAdhanPhpApiClient/1.12',
                     'Referer' => gethostname(),
                 ],
                     'query' => $data,
