@@ -127,7 +127,7 @@ class HijriGregorianCalendar extends Client {
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }
-    
+
     }
 
     public function specialDays()
@@ -139,7 +139,7 @@ class HijriGregorianCalendar extends Client {
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }
-    
+
     }
 
     public function islamicMonths()
@@ -151,7 +151,17 @@ class HijriGregorianCalendar extends Client {
         } catch (Exception $e) {
             throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
         }
-    
+
+    }
+
+    public function hijriHolidaysByYear($hijriYear, $adjustment = 0) {
+        try {
+            $r = $this->connect(Endpoints::HIJRI_HOLIDAYS_BY_YEAR. '/' . $hijriYear, ['adjustment' => $adjustment]);
+
+            return $r;
+        } catch (Exception $e) {
+            throw new Exception('Connection failed: ' . $e->getMessage(), $e->getCode());
+        }
     }
 
 }

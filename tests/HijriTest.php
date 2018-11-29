@@ -18,7 +18,7 @@ class HijriTest extends PHPUnit\Framework\TestCase
         $r = $c->islamicMonths();
         $this->assertEquals('12', count($r['data']));
     }
-    
+
     public function testHijriHolidays()
     {
         $c = new HijriGregorianCalendar();
@@ -33,5 +33,12 @@ class HijriTest extends PHPUnit\Framework\TestCase
         $c = new HijriGregorianCalendar();
         $r = $c->specialDays();
         $this->assertEquals('19', count($r['data']));
+    }
+
+    public function testHijriHolsByYear()
+    {
+        $c = new HijriGregorianCalendar();
+        $this->assertCount(19, $c->hijriHolidaysByYear(1440, 1)['data']);
+
     }
 }
