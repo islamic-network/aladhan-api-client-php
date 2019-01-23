@@ -1,5 +1,9 @@
 ## بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
 
+[![](https://img.shields.io/github/release/islamic-network/aladhan-api-client-php.svg)](https://github.com/islamic-network/aladhan-api-client-php/releases)
+![](https://img.shields.io/packagist/dt/aladhan/api-client.svg)
+[![](https://img.shields.io/github/license/islamic-network/aladhan-api-client-php.svg)](https://github.com/islamic-network/aladhan-api-client-php/blob/master/LICENSE)
+
 ### AlAdhan Prayer Times API Client (PHP)
 This is a PHP API client that uses the rest API at aladhan.com to generate prayer times for Islamic prayers.
 
