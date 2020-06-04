@@ -91,9 +91,12 @@ class Client {
      */
     protected $school;
 
-    public function __construct()
+    public function __construct($baseUri = 'http://api.aladhan.com')
     {
-        $this->client = new \GuzzleHttp\Client();
+        if (getenv('API_BASE_URI')) {
+            $baseUri = getenv('API_BASE_URI');
+        }
+        $this->client = new \GuzzleHttp\Client(['base_uri' => $baseUri]);
     }
 
     public function setLatitude($latitude) {
@@ -168,7 +171,7 @@ class Client {
                 [
                 'headers' => [
                     'Content-Type' => 'application/text',
-                    'User-Agent' => 'AlAdhanPhpApiClient/1.13',
+                    'User-Agent' => 'AlAdhanPhpApiClient/1.15',
                     'Referer' => gethostname(),
                 ],
                     'query' => $data,
