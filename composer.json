@@ -6,11 +6,11 @@
   "authors": [
     {
       "name": "Meezaan-ud-Din Abdu Dhil-Jalali Wal-Ikram",
-      "email": "website@meezaan.net"
+      "email": "support@islamic.network"
     }
   ],
   "require-dev": {
-    "phpunit/phpunit": "^6.2"
+    "phpunit/phpunit": "^9.0"
   },
   "autoload": {
     "psr-0": {
@@ -18,6 +18,6 @@
     }
   },
   "require": {
-    "guzzlehttp/guzzle": "^6.2"
+    "guzzlehttp/guzzle": "^7.0"
   }
 }

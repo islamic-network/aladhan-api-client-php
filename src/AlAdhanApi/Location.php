@@ -6,12 +6,8 @@ namespace AlAdhanApi;
  * @package AlAdhanApi
  */
 
-class Location
+class Location extends Client
 {
-    /**
-     * @var \GuzzleHttp\Client
-     */
-    private $client;
 
     /**
      * @var
@@ -39,7 +35,7 @@ class Location
      */
     public function __construct($location)
     {
-        $this->client = new \GuzzleHttp\Client();
+        parent::__construct();
 
         $this->location = $location;
 
@@ -82,7 +78,7 @@ class Location
      * @return \GuzzleHttp\Message\FutureResponse|\GuzzleHttp\Message\ResponseInterface|\GuzzleHttp\Ring\Future\FutureInterface|null
      * @throws \Exception
      */
-    private function connect($endpoint, array $data)
+    protected function connect($endpoint, array $data)
     {
         try {
             $request = $this->client->get(

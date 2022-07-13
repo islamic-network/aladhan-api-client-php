@@ -8,7 +8,7 @@ class HijriTest extends PHPUnit\Framework\TestCase
     {
         $c = new HijriGregorianCalendar();
         $r = $c->currentIslamicYear();
-        $this->assertEquals('1439', $r['data']);
+        $this->assertEquals('1443', $r['data']);
 
     }
 
