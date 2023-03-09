@@ -63,6 +63,7 @@ class Times extends Client {
         $data['timezonestring'] = $this->timezone;
         $data['method'] = $this->method;
         $data['adjustment'] = $this->adjustment;
+        $data['school'] = $this->school;
         
         return $data;
     }
